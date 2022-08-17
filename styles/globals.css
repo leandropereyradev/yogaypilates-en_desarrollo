@@ -1,9 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  letter-spacing: 2px;
 }
 
 a {
@@ -15,12 +20,117 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+
+/* Menu */
+
+.nav__container{
+  @apply px-2 md:px-6 bg-white bg-opacity-80 backdrop-filter backdrop-blur-xl w-[100%] fixed z-[10000]
+}
+
+.nav__container--menu{
+  @apply flex flex-row justify-between items-center
+}
+
+.nav__menu{
+  @apply uppercase font-bold text-slate-700 flex items-center
+}
+
+.nav__menu--responsive{
+  @apply  absolute bg-white bg-opacity-80 backdrop-filter backdrop-blur-xl flex-col gap-6 top-12 w-52 py-6 px-7 rounded-bl-md opacity-0 right-[-400px] transition-all ease-in duration-500
+}
+
+.nav__menu--large{
+  @apply static z-auto gap-6 opacity-100 py-4
+}
+
+.nav__menu--opened{
+  @apply opacity-100 right-[0px]
+}
+
+.nav__hamburger{
+  @apply flex flex-col h-12 w-12 border-none justify-center items-center
+}
+
+/* Header */
+
+.home__container{
+  @apply w-full h-screen relative
+}
+
+.home__video--container{
+  @apply absolute w-full h-screen flex flex-col items-center justify-center md:block md:pt-[8rem]
+}
+
+.home__image--container{
+  @apply w-screen pl-10 md:pl-16 xl:pl-28 2xl:pl-36 2xl:pt-[2rem]
+}
+
+.home__image--first{
+  @apply w-[90%] lg:w-[70%] xl:w-[60%]
+}
+
+.home__image--second{
+  @apply w-[60%] mt-8 mb-40 lg:w-[40%] lg:mt-10 xl:w-[30%] 2xl:mt-20
+}
+
+/* Contact */
+
+.contact__container--small{
+  @apply bg-[url("/image/loto-md.jpg")]
+}
+
+.contact__container--large{
+  @apply bg-[url("/image/loto.jpg")]
+}
+
+.contact__info--container{
+  @apply mt-12 px-5 rounded-2xl bg-white bg-opacity-10 backdrop-filter backdrop-blur-md z-20 w-[80%] h-[90%] lg:h-[80%] text-slate-50 flex flex-col justify-center items-center text-center gap-8 lg:gap-24
+}
+
+.contact__address--container{
+  @apply lg:grid lg:grid-cols-2 lg:w-[90%] lg:items-baseline
+}
+
+.contact__address--h1{
+  @apply text-[2rem] md:text-[4rem] lg:text-[2.5rem] 2xl:text-[4.5rem] uppercase mb-4
+}
+
+.contact__address--p{
+  @apply md:text-[1.5rem] lg:text-[1rem] 2xl:text-[1.5rem]
+}
+
+.contact__social--container{
+  @apply grid grid-cols-3 w-[100%] lg:w-[50%] 2xl:w-[30%] gap-y-6 md:gap-y-16 lg:gap-y-8 md:mt-16 lg:mt-4
+}
+
+.contact__social--link{
+  @apply w-[2.5rem] md:w-[4.5rem] lg:w-[3rem] m-auto
+}
+
+/* Footer */
+
+.footer__container{
+  @apply text-slate-50 text-[0.7rem] text-center bg-gray-900 w-full flex flex-col lg:flex-row gap-2 lg:gap-8 lg:justify-center py-3
+}
+
+/* Avisos legales */
+
+.aviso__container{
+  @apply py-20 px-4 md:px-20 lg:container lg:max-w-5xl lg:mx-auto
+}
+
+.aviso__container h1{
+  @apply font-bold mb-5
+}
+
+.aviso__container h2{
+  @apply font-semibold mb-2 mt-8
+}
+
+.aviso__container p{
+  @apply mb-4 md:text-justify
+}
+
+.aviso__container li{
+  @apply list-disc ml-10 mb-4 md:text-justify
 }
