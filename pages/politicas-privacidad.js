@@ -1,9 +1,10 @@
+import s from "../styles/avisos.module.scss";
 import Layout from "../components/Layout";
 
 export default function politicasprivacidad() {
   return (
     <Layout title={"Políticas de Privacidad"}>
-      <div className="aviso__container">
+      <div className={s.aviso}>
         <h1>PRIVACIDAD</h1>
         <h2>Responsable – ¿quién es el responsable del tratamiento de los datos?</h2>
         <p>

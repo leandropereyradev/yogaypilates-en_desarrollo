@@ -1,9 +1,10 @@
 import Layout from "../components/Layout";
+import s from '../styles/avisos.module.scss'
 
 export default function avisolegal() {
   return (
     <Layout title={"Aviso Legal"}>
-      <div className="aviso__container">
+      <div className={s.aviso}>
         <h1>AVISO LEGAL</h1>
         <h2>Aviso legal y términos de uso</h2>
         <p>

@@ -1,8 +1,9 @@
 import Link from "next/link";
+import s from "../styles/footer.module.scss";
 
 export default function Footer() {
   return (
-    <div className="footer__container">
+    <div className={s.footer}>
       <p>BienEstar - Todos los derechos reservados 2022</p>
       <div>
         <Link href="/aviso-legal">

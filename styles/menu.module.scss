@@ -1,0 +1,100 @@
+.nav {
+  padding: 0.5rem 0.5rem 0;
+  position: absolute;
+  width: 100%;
+  &_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 0.5rem;
+    position: relative;
+    img {
+      width: 2rem;
+      margin: auto 0;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      height: 100vh;
+      width: 50vw;
+      top: -0.5rem;
+      right: -1rem;
+      background: rgba(255, 255, 255, 0.49);
+      border-radius: 16px 0 0 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: rgb(252, 183, 93);
+      position: absolute;
+      transition-duration: 500ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-property: all;
+      opacity: 0;
+      z-index: -10;
+      @media screen and (min-width: 700px) {
+        width: 40vw;
+        font-size: 2rem;
+      }
+      @media screen and (min-width: 1000px) {
+        width: 30vw;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 25vw;
+      }
+      @media screen and (min-width: 1900px) {
+        font-size: 2.5rem;
+      }
+      &.open {
+        opacity: 1;
+        z-index: 10;
+      }
+      li {
+        list-style: none;
+        a {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+    &_hamburger {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+      .hamburgerLine {
+        height: 3px;
+        width: 25px;
+        border-radius: 5px;
+        margin: 3px 0;
+        background-color: aliceblue;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+        &.a {
+          transform: rotate(45deg) translateY(7px) translateX(7px);
+        }
+        &.b {
+          opacity: 0;
+        }
+        &.c {
+          transform: rotate(-45deg) translateY(-6px) translateX(5.5px);
+        }
+      }
+      button {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}

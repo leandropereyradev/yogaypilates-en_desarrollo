@@ -1,0 +1,143 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &_title {
+    &_image {
+      background-image: url("../public/image/pilates_2.jpeg");
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &_text {
+      padding: 0 2rem;
+      h1 {
+        text-align: center;
+        margin: 4rem 0 1.5rem 0;
+      }
+    }
+    &_paragraph {
+      padding: 2rem;
+      &_ul {
+        margin-bottom: 2rem;
+        ul {
+          padding: 2rem 0 2rem 2rem;
+          li {
+            margin-bottom: 0.5rem;
+          }
+        }
+        &_image {
+          background-image: url("../public/image/kary2.jpg");
+          height: 90vh;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 700px) {
+    &_title {
+      &_text {
+        h1 {
+          margin: 6rem 0 3rem 0;
+          font-size: 2.5rem;
+        }
+        p {
+          text-align: justify;
+          font-size: 1.5rem;
+        }
+      }
+      &_paragraph {
+        text-align: justify;
+        font-size: 1.5rem;
+        &_ul {
+          ul {
+            padding: 3rem 0 3rem 4rem;
+            li {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    &_title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      &_image {
+        width: 50vw;
+        order: 1;
+      }
+      &_text {
+        width: 50vw;
+        padding: 0 3.5rem;
+        h1 {
+          margin: 0 0 2.5rem 0;
+        }
+      }
+      &_paragraph {
+        padding: 4rem;
+        &_ul {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          align-items: center;
+          margin: 5rem 0;
+          ul {
+            margin-left: 5rem;
+            li {
+              margin-bottom: 0.5rem;
+            }
+          }
+          &_image {
+            order: -1;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &_title {
+      &_image {
+        width: 40vw;
+      }
+      &_text {
+        width: 60vw;
+      }
+    }
+  }
+  @media screen and (min-width: 1900px) {
+    &_title {
+      &_text {
+        padding: 0 7rem;
+        h1 {
+          margin: 0 0 5rem 0;
+          font-size: 5rem;
+        }
+        p {
+          font-size: 2.5rem;
+        }
+      }
+      &_paragraph {
+        max-width: 1900px;
+        margin: 0 auto;
+        padding: 9rem;
+        font-size: 2.5rem;
+        &_ul {
+          margin: 8rem 0;
+          ul {
+            margin-left: 10rem;
+            li {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

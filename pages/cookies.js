@@ -1,9 +1,10 @@
+import s from "../styles/avisos.module.scss";
 import Layout from "../components/Layout";
 
 export default function Cookies() {
   return (
     <Layout title={"Cookies"}>
-      <div className="aviso__container">
+      <div className={s.aviso}>
         <h1>Política de Cookies</h1>
         <p>
           En esta web se utilizan cookies de terceros y propias para conseguir que tengas una mejor experiencia de navegación, puedas
